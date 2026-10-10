@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "CS2 Rush Replay Downloader",
+  "version": "1.0",
+  "description": "Downloads the most recent CS2 replay from your Steam match history when opened with #autodownload.",
+  "permissions": ["downloads", "offscreen"],
+  "host_permissions": ["http://*.valve.net/*", "https://*.valve.net/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://steamcommunity.com/profiles/*/gcpd/730*",
+        "https://steamcommunity.com/id/*/gcpd/730*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.dem
+*.dem.bz2
+*.part
+rush_demos/
+.env
