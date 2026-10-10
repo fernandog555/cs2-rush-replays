@@ -46,17 +46,6 @@ Options:
 
 The extension only acts when the page URL ends in `#autodownload`, which the script adds. Browsing your match history normally never triggers a download. While it runs, a status box in the top-right of the Steam tab shows what it's doing.
 
-## Alternative: cookie-based bulk download
-
-`download_rush_replays.py` downloads **every** replay still available on your Rush tab without opening Chrome. It authenticates with your `steamLoginSecure` cookie (from DevTools → Application → Cookies on steamcommunity.com):
-
-```
-set STEAM_LOGIN_SECURE=<cookie value>
-python download_rush_replays.py --out rush_demos
-```
-
-It needs the `requests` package (`pip install requests`). Treat that cookie like a password: it gives full access to your Steam account.
-
 ## Notes
 
 - Valve keeps replays for roughly 30 days. Older matches show no download link.

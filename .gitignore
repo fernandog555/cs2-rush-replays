@@ -3,5 +3,4 @@ __pycache__/
 *.dem
 *.dem.bz2
 *.part
-rush_demos/
 .env
